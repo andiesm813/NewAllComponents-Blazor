@@ -1,0 +1,502 @@
+@page "/"
+@using Financial
+@using Models.Financial
+@using Northwind
+@using Models.Northwind
+@inject IFinancialService FinancialService
+@inject INorthwindService NorthwindService
+
+<div class="column-layout view-1-container">
+    <div class="row-layout group">
+        <div class="column-layout group_1">
+            <IgbTabs class="tabs" view_1-scope>
+                <IgbTab Selected="true">
+                    <span class="material-icons">
+                        library_music
+                    </span>
+                    <span>Albums</span>
+                </IgbTab>
+                <IgbTabPanel class="row-layout tab-item-content" view_1-scope>
+                    <p class="typography__body-1 text">
+                        Albums
+                    </p>
+                </IgbTabPanel>
+                <IgbTab>
+                    <span class="material-icons">
+                        favorite
+                    </span>
+                    <span>Favorite</span>
+                </IgbTab>
+                <IgbTabPanel class="row-layout tab-item-content" view_1-scope></IgbTabPanel>
+                <IgbTab Disabled="true">
+                    <span class="material-icons">
+                        info
+                    </span>
+                    <span>Details</span>
+                </IgbTab>
+                <IgbTabPanel class="row-layout tab-item-content" view_1-scope></IgbTabPanel>
+            </IgbTabs>
+            <IgbAccordion SingleExpand="false" class="accordion" view_1-scope>
+                <IgbExpansionPanel>
+                    <p class="typography__body-1 text">
+                        This is the content text of the expanded accordion item.
+                    </p>
+                    <span slot="title">Accordion Item 1</span>
+                    <span slot="subtitle">Action, Adventure, Thriller</span>
+                </IgbExpansionPanel>
+                <IgbExpansionPanel>
+                    <p class="typography__body-1 text">
+                        This is the content text of the expanded accordion item.
+                    </p>
+                    <span slot="title">Accordion Item 2</span>
+                    <span slot="subtitle">Action, Adventure, Thriller</span>
+                </IgbExpansionPanel>
+                <IgbExpansionPanel>
+                    <p class="typography__body-1 text">
+                        This is the content text of the expanded accordion item.
+                    </p>
+                    <span slot="title">Accordion Item 3</span>
+                    <span slot="subtitle">Action, Adventure, Thriller</span>
+                </IgbExpansionPanel>
+            </IgbAccordion>
+            <IgbList class="list" view_1-scope>
+                <IgbListItem>
+                    <div slot="title">Single Line Item</div>
+                    <span slot="end" class="material-icons icon">
+                        keyboard_arrow_right
+                    </span>
+                </IgbListItem>
+                <IgbListItem>
+                    <div slot="title">Single Line Item</div>
+                    <span slot="end" class="material-icons icon">
+                        keyboard_arrow_right
+                    </span>
+                </IgbListItem>
+                <IgbListItem>
+                    <div slot="title">Single Line Item</div>
+                    <span slot="end" class="material-icons icon">
+                        keyboard_arrow_right
+                    </span>
+                </IgbListItem>
+            </IgbList>
+            <IgbList class="list" view_1-scope>
+                <IgbListItem>
+                    <IgbAvatar Src="assets/53c4f9a7b7f5f730460a0235b717b99679251327.png" slot="start" Shape="AvatarShape.Circle"></IgbAvatar>
+                    <div slot="title">Primary Text </div>
+                    <div slot="subtitle">Secondary Text</div>
+                    <span slot="end" class="material-icons icon">
+                        keyboard_arrow_right
+                    </span>
+                </IgbListItem>
+                <IgbListItem>
+                    <IgbAvatar Src="assets/53c4f9a7b7f5f730460a0235b717b99679251327.png" slot="start" Shape="AvatarShape.Circle"></IgbAvatar>
+                    <div slot="title">Primary Text </div>
+                    <div slot="subtitle">Secondary Text</div>
+                    <span slot="end" class="material-icons icon">
+                        keyboard_arrow_right
+                    </span>
+                </IgbListItem>
+                <IgbListItem>
+                    <IgbAvatar Src="assets/53c4f9a7b7f5f730460a0235b717b99679251327.png" slot="start" Shape="AvatarShape.Circle"></IgbAvatar>
+                    <div slot="title">Primary Text </div>
+                    <div slot="subtitle">Secondary Text</div>
+                    <span slot="end" class="material-icons icon">
+                        keyboard_arrow_right
+                    </span>
+                </IgbListItem>
+            </IgbList>
+        </div>
+        <div class="column-layout group_1">
+            <IgbStepper Orientation="StepperOrientation.Vertical" TitlePosition="StepperTitlePosition.End" @ref="_stepper" class="stepper" view_1-scope>
+                <IgbStep Optional="true">
+                    <div class="column-layout step-content">
+                        <div class="row-layout group_2">
+                            <IgbButton Size="SizableComponentSize.Large" @onclick="@(e => _stepper!.NextAsync())" class="button" view_1-scope>
+                                Next
+                                <IgbRipple></IgbRipple>
+                            </IgbButton>
+                            <IgbButton Size="SizableComponentSize.Large" @onclick="@(e => _stepper!.NextAsync())" class="button" view_1-scope>
+                                Next
+                                <IgbRipple></IgbRipple>
+                            </IgbButton>
+                        </div>
+                    </div>
+                    <p slot="title">Parcel Dispatched</p>
+                    <p slot="subtitle">13 Aug 2021 - 01:10 PM</p>
+                </IgbStep>
+                <IgbStep Optional="true">
+                    <div class="column-layout step-content_1">
+                        <p class="typography__body-1 text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur soluta nulla asperiores, officia ullam recusandae voluptatem omnis perferendis vitae non magni magnam praesentium placeat nemo quas repudiandae. Nisi, quo ex!
+                        </p>
+                        <div class="row-layout group_3">
+                            <IgbButton Size="SizableComponentSize.Large" @onclick="@(e => _stepper!.PrevAsync())" class="button" view_1-scope>
+                                Prev
+                                <IgbRipple></IgbRipple>
+                            </IgbButton>
+                            <IgbButton Size="SizableComponentSize.Large" @onclick="@(e => _stepper!.NextAsync())" class="button" view_1-scope>
+                                Next
+                                <IgbRipple></IgbRipple>
+                            </IgbButton>
+                        </div>
+                    </div>
+                    <p slot="title">Arrived at sorting center</p>
+                    <p slot="subtitle">15 Aug 2021 - 02:51 AM</p>
+                </IgbStep>
+                <IgbStep Optional="true">
+                    <div class="column-layout step-content_2">
+                        <p class="typography__body-1 text">
+                            This is the content text of the active step.
+                        </p>
+                    </div>
+                    <p slot="title">Delivering</p>
+                    <p slot="subtitle">21 Aug 2021 - 07:55 AM</p>
+                </IgbStep>
+            </IgbStepper>
+            <IgbTree Selection="TreeSelection.Multiple" class="tree" view_1-scope>
+                <IgbTreeItem Label="Design">
+                    <IgbTreeItem Label="Figma">
+                        <IgbTreeItem Label="Figma"></IgbTreeItem>
+                    </IgbTreeItem>
+                    <IgbTreeItem Label="Adobe XD"></IgbTreeItem>
+                    <IgbTreeItem Label="Sketch"></IgbTreeItem>
+                </IgbTreeItem>
+            </IgbTree>
+        </div>
+        <div class="column-layout group_4">
+            <div class="row-layout group_5">
+                <IgbButton Size="SizableComponentSize.Large" class="button_1" view_1-scope>
+                    <span class="material-icons">
+                        add
+                    </span>
+                    <span>Button</span>
+                    <IgbRipple></IgbRipple>
+                </IgbButton>
+                <IgbButton Variant="ButtonVariant.Outlined" Size="SizableComponentSize.Large" class="button_1" view_1-scope>
+                    <span class="material-icons">
+                        add
+                    </span>
+                    <span>Button</span>
+                    <IgbRipple></IgbRipple>
+                </IgbButton>
+                <IgbButton Variant="ButtonVariant.Flat" Size="SizableComponentSize.Large" class="button_1" view_1-scope>
+                    <span class="material-icons">
+                        add
+                    </span>
+                    <span>Button</span>
+                    <IgbRipple></IgbRipple>
+                </IgbButton>
+            </div>
+            <span class="user-input_2">ButtonGroup not yet available in Blazor</span>
+            <div class="row-layout group_6">
+                <IgbIconButton Variant="IconButtonVariant.Flat">
+                    <span class="material-icons">
+                        email
+                    </span>
+                    <IgbRipple></IgbRipple>
+                </IgbIconButton>
+                <IgbButton Variant="ButtonVariant.Fab" Size="SizableComponentSize.Large" class="user-input" view_1-scope>
+                    <span class="material-icons">
+                        add
+                    </span>
+                    <IgbRipple></IgbRipple>
+                </IgbButton>
+                <IgbButton Variant="ButtonVariant.Fab" Size="SizableComponentSize.Large" class="user-input" view_1-scope>
+                    <span class="material-icons">
+                        add
+                    </span>
+                    <span>fab</span>
+                    <IgbRipple></IgbRipple>
+                </IgbButton>
+                <span class="material-icons icon">
+                    mail
+                </span>
+                <IgbBadge class="badge" view_1-scope></IgbBadge>
+                <IgbBadge class="badge" view_1-scope>
+                    1
+                </IgbBadge>
+                <IgbBadge class="badge" view_1-scope>
+                    10
+                </IgbBadge>
+                <IgbBadge class="badge" view_1-scope>
+                    1000
+                </IgbBadge>
+                <IgbBadge class="badge" view_1-scope>
+                    <span class="material-icons">
+                        mail
+                    </span>
+                </IgbBadge>
+            </div>
+            <div class="row-layout group_7">
+                <IgbChip Size="SizableComponentSize.Large" class="chip" view_1-scope>
+                    Country
+                </IgbChip>
+                <IgbChip Size="SizableComponentSize.Large" class="chip" view_1-scope>
+                    <span slot="prefix">
+                        <span class="material-icons icon_1">
+                            place
+                        </span>
+                    </span>
+                    Country
+                </IgbChip>
+                <IgbChip Size="SizableComponentSize.Large" class="chip" view_1-scope>
+                    <span slot="prefix">
+                        <span class="material-icons icon_1">
+                            place
+                        </span>
+                    </span>
+                    <span slot="suffix">
+                        <span class="material-icons icon_1">
+                            clear
+                        </span>
+                    </span>
+                    Country
+                </IgbChip>
+            </div>
+            <div class="row-layout group_8">
+                <div class="column-layout group_9">
+                    <IgbCheckbox LabelPosition="CheckboxBaseLabelPosition.After" class="user-input" view_1-scope>
+                        Label
+                    </IgbCheckbox>
+                    <IgbCheckbox LabelPosition="CheckboxBaseLabelPosition.After" class="user-input" view_1-scope>
+                        Label
+                    </IgbCheckbox>
+                    <IgbCheckbox LabelPosition="CheckboxBaseLabelPosition.After" class="user-input" view_1-scope>
+                        Label
+                    </IgbCheckbox>
+                </div>
+                <IgbRadioGroup class="user-input" view_1-scope>
+                    <IgbRadio Value="1" class="radio" view_1-scope>
+                        Label
+                    </IgbRadio>
+                    <IgbRadio Value="2" class="radio" view_1-scope>
+                        Label
+                    </IgbRadio>
+                    <IgbRadio Value="3" class="radio" view_1-scope>
+                        Label
+                    </IgbRadio>
+                </IgbRadioGroup>
+                <div class="column-layout group_10">
+                    <IgbSwitch LabelPosition="CheckboxBaseLabelPosition.Before" Checked="@_checked" Change="@(e => _checked = (bool)e.Detail)" class="user-input" view_1-scope>
+                        Label
+                    </IgbSwitch>
+                    <IgbSwitch LabelPosition="CheckboxBaseLabelPosition.Before" class="user-input" view_1-scope>
+                        Label
+                    </IgbSwitch>
+                    <IgbSwitch LabelPosition="CheckboxBaseLabelPosition.Before" Checked="@_checked" Disabled="true" Change="@(e => _checked = (bool)e.Detail)" class="user-input" view_1-scope>
+                        Label
+                    </IgbSwitch>
+                    <IgbSwitch LabelPosition="CheckboxBaseLabelPosition.Before" Disabled="true" class="user-input" view_1-scope>
+                        Label
+                    </IgbSwitch>
+                </div>
+            </div>
+            <div class="row-layout group_8">
+                <IgbRating Label="Rate your experience" Size="SizableComponentSize.Small" class="user-input" view_1-scope></IgbRating>
+                <IgbRating Label="Rate your experience" Value="@_value" Size="SizableComponentSize.Medium" Change="@(e => _value = (double)e.Detail)" class="user-input" view_1-scope></IgbRating>
+                <IgbRating Label="Rate your experience" Value="@_value" Size="SizableComponentSize.Large" Disabled="true" Change="@(e => _value = (double)e.Detail)" class="user-input" view_1-scope></IgbRating>
+            </div>
+            <div class="row-layout group_7">
+                <IgbAvatar Src="assets/a7f211be67afc061d9571f5b5b5236cd92420e0c.png" Size="SizableComponentSize.Large"></IgbAvatar>
+                <IgbAvatar Src="assets/a06650fce7091f420c440f26201d916f775db29d.png" Size="SizableComponentSize.Medium"></IgbAvatar>
+                <IgbAvatar Src="assets/7e86e8b8b495deb8eefcdd3556151a40532211e1.png"></IgbAvatar>
+                <IgbAvatar Initials="AB" Size="SizableComponentSize.Large" Shape="AvatarShape.Circle"></IgbAvatar>
+                <IgbAvatar Initials="AB" Size="SizableComponentSize.Medium" Shape="AvatarShape.Circle"></IgbAvatar>
+                <IgbAvatar Initials="AB" Shape="AvatarShape.Circle"></IgbAvatar>
+                <IgbAvatar Shape="AvatarShape.Rounded" Size="SizableComponentSize.Large">
+                    <span class="material-icons">
+                        people
+                    </span>
+                </IgbAvatar>
+                <IgbAvatar Shape="AvatarShape.Rounded" Size="SizableComponentSize.Medium">
+                    <span class="material-icons">
+                        people
+                    </span>
+                </IgbAvatar>
+                <IgbAvatar Shape="AvatarShape.Rounded">
+                    <span class="material-icons">
+                        people
+                    </span>
+                </IgbAvatar>
+            </div>
+            <div class="row-layout group_7">
+                <IgbSlider Value="@_value1" Min="0" Max="100" Step="10" DiscreteTrack="true" Change="@(e => _value1 = (double)e.Detail)" class="slider" view_1-scope></IgbSlider>
+            </div>
+        </div>
+        <div class="column-layout group_11">
+            <IgbInput Label="Label" Placeholder="Placeholder" Outlined="true" class="user-input_2" view_1-scope>
+                <span slot="prefix">
+                    <span class="material-icons icon">
+                        account_circle
+                    </span>
+                </span>
+                <span slot="suffix">
+                    <span class="material-icons icon">
+                        info
+                    </span>
+                </span>
+                <span slot="helper-text">Hint</span>
+            </IgbInput>
+            <IgbDatePicker Label="Date" class="date-picker" view_1-scope></IgbDatePicker>
+            <span class="textarea">Textarea not yet available in Blazor</span>
+            <IgbSelect Outlined="true" Label="Select" Value="@_value2" Change="@(e => _value2 = (string)e.Detail.Value)" class="user-input_2" view_1-scope>
+                <IgbSelectHeader>
+                    Header
+                </IgbSelectHeader>
+                <IgbSelectItem Value="1">
+                    Drop Down Item text
+                </IgbSelectItem>
+                <IgbSelectItem Value="2">
+                    Selected value
+                </IgbSelectItem>
+                <IgbSelectItem Value="Option">
+                    Drop Down Item text
+                </IgbSelectItem>
+                <IgbSelectItem Value="Option">
+                    Drop Down Item text
+                </IgbSelectItem>
+            </IgbSelect>
+            <IgbCombo Outlined="true" Data="@_financialBoxOfficeRevenue" Label="Label/Placeholder" DisplayKey="Franchise" SingleSelect="true" class="user-input_2" view_1-scope></IgbCombo>
+            <IgbInput Label="Label" Placeholder="Placeholder" Outlined="false" class="user-input_2" view_1-scope>
+                <span slot="prefix">
+                    <span class="material-icons icon">
+                        account_circle
+                    </span>
+                </span>
+                <span slot="suffix">
+                    <span class="material-icons icon">
+                        info
+                    </span>
+                </span>
+                <span slot="helper-text">Hint</span>
+            </IgbInput>
+            <IgbDatePicker Label="Date" class="date-picker" view_1-scope></IgbDatePicker>
+            <span class="textarea">Textarea not yet available in Blazor</span>
+            <IgbSelect Outlined="false" Label="Select" Value="@_value2" Change="@(e => _value2 = (string)e.Detail.Value)" class="user-input_2" view_1-scope>
+                <IgbSelectHeader>
+                    Header
+                </IgbSelectHeader>
+                <IgbSelectItem Value="1">
+                    Drop Down Item text
+                </IgbSelectItem>
+                <IgbSelectItem Value="2">
+                    Selected value
+                </IgbSelectItem>
+                <IgbSelectItem Value="Option">
+                    Drop Down Item text
+                </IgbSelectItem>
+                <IgbSelectItem Value="Option">
+                    Drop Down Item text
+                </IgbSelectItem>
+            </IgbSelect>
+            <IgbCombo Data="@_financialBoxOfficeRevenue" Label="Label/Placeholder" DisplayKey="Franchise" Outlined="false" SingleSelect="true" class="user-input_2" view_1-scope></IgbCombo>
+        </div>
+        <div class="column-layout group_1">
+            <IgbCalendar HideHeader="false" class="calendar" view_1-scope></IgbCalendar>
+            <IgbCard Outlined="true" class="card" view_1-scope>
+                <IgbCardMedia class="media-content" view_1-scope>
+                    <img src="assets/9224c81ebdbe1cd0ac916c1389ee7eb2e9bf77b6.png" class="image" />
+                </IgbCardMedia>
+                <IgbCardHeader>
+                    <div slot="thumbnail">
+                        <IgbAvatar Src="assets/53c4f9a7b7f5f730460a0235b717b99679251327.png"></IgbAvatar>
+                    </div>
+                    <h3 slot="title">
+                        Title goes here...
+                    </h3>
+                    <h5 slot="subtitle">
+                        Subtitle goes here...
+                    </h5>
+                </IgbCardHeader>
+                <IgbCardContent class="body-content" view_1-scope>
+                    <p class="typography__body-2 text">
+                        A paragraph is a self-contained unit of a discourse in writing dealing with a particular point or idea.
+                    </p>
+                </IgbCardContent>
+                <IgbCardActions class="actions-content" view_1-scope>
+                    <IgbButton Variant="ButtonVariant.Flat" slot="start" Size="SizableComponentSize.Large" class="button_2" view_1-scope>
+                        Button
+                        <IgbRipple></IgbRipple>
+                    </IgbButton>
+                    <IgbIconButton slot="end" Variant="IconButtonVariant.Flat">
+                        <span class="material-icons">
+                            favorite
+                        </span>
+                        <IgbRipple></IgbRipple>
+                    </IgbIconButton>
+                    <IgbIconButton slot="end" Variant="IconButtonVariant.Flat">
+                        <span class="material-icons">
+                            bookmark
+                        </span>
+                        <IgbRipple></IgbRipple>
+                    </IgbIconButton>
+                    <IgbIconButton slot="end" Variant="IconButtonVariant.Flat">
+                        <span class="material-icons">
+                            share
+                        </span>
+                        <IgbRipple></IgbRipple>
+                    </IgbIconButton>
+                </IgbCardActions>
+            </IgbCard>
+        </div>
+    </div>
+    <div class="row-layout group_12">
+        <IgbCategoryChart DataSource="@_financialBoxOfficeRevenue" ChartType="CategoryChartType.Area" ChartTitle="This is the title" XAxisTitle="Axis title" YAxisTitle="Vertical Axis Title" ComputedPlotAreaMarginMode="ComputedPlotAreaMarginMode.Series" class="category-chart" view_1-scope></IgbCategoryChart>
+        <IgbCategoryChart DataSource="@_financialBoxOfficeRevenue" ChartType="CategoryChartType.Column" ChartTitle="This is the title" ComputedPlotAreaMarginMode="ComputedPlotAreaMarginMode.Series" class="category-chart" view_1-scope></IgbCategoryChart>
+        <IgbGrid Data="@_northwindEmployees" PrimaryKey="EmployeeID" DisplayDensity="DisplayDensity.Cosy" AllowFiltering="true" FilterMode="FilterMode.ExcelStyleFilter" AutoGenerate="false" class="ig-typography grid" view_1-scope>
+            <IgbColumn Field="LastName" DataType="GridColumnDataType.String" Header="lastName" Sortable="true" Selectable="false"></IgbColumn>
+            <IgbColumn Field="FirstName" DataType="GridColumnDataType.String" Header="firstName" Sortable="true" Selectable="false"></IgbColumn>
+            <IgbColumn Field="EmployeeID" DataType="GridColumnDataType.Number" Header="employeeID" Sortable="true" Selectable="false"></IgbColumn>
+            <IgbColumn Field="Title" DataType="GridColumnDataType.String" Header="title" Sortable="true" Selectable="false"></IgbColumn>
+            <IgbColumn Field="TitleOfCourtesy" DataType="GridColumnDataType.String" Header="titleOfCourtesy" Sortable="true" Selectable="false"></IgbColumn>
+            <IgbColumn Field="BirthDate" DataType="GridColumnDataType.Date" Header="birthDate" Sortable="true" Selectable="false"></IgbColumn>
+            <IgbColumn Field="HireDate" DataType="GridColumnDataType.Date" Header="hireDate" Sortable="true" Selectable="false"></IgbColumn>
+            <IgbColumn Field="Address.Street" DataType="GridColumnDataType.String" Header="address street" Sortable="true" Selectable="false"></IgbColumn>
+            <IgbColumn Field="Address.City" DataType="GridColumnDataType.String" Header="address city" Sortable="true" Selectable="false"></IgbColumn>
+            <IgbColumn Field="Address.Region" DataType="GridColumnDataType.String" Header="address region" Sortable="true" Selectable="false"></IgbColumn>
+            <IgbColumn Field="Address.PostalCode" DataType="GridColumnDataType.String" Header="address postalCode" Sortable="true" Selectable="false"></IgbColumn>
+            <IgbColumn Field="Address.Country" DataType="GridColumnDataType.String" Header="address country" Sortable="true" Selectable="false"></IgbColumn>
+            <IgbColumn Field="Address.Phone" DataType="GridColumnDataType.String" Header="address phone" Sortable="true" Selectable="false"></IgbColumn>
+            <IgbColumn Field="ManagerID" DataType="GridColumnDataType.Number" Header="managerID" Sortable="true" Selectable="false"></IgbColumn>
+            <IgbColumn Field="Notes" DataType="GridColumnDataType.String" Header="notes" Sortable="true" Selectable="false"></IgbColumn>
+            <IgbColumn Field="AvatarUrl" DataType="GridColumnDataType.String" Header="avatarUrl" Sortable="true" Selectable="false"></IgbColumn>
+        </IgbGrid>
+    </div>
+    <p class="typography__body-1 text">
+        This is the content text of the active step.
+    </p>
+    <IgbSnackbar ActionText="Action" Action="@(e => _snackbar!.ToggleAsync())" @ref="_snackbar" class="snackbar" view_1-scope>
+        This is a message
+    </IgbSnackbar>
+    <IgbDialog CloseOnOutsideClick="true" KeepOpenOnEscape="false" @ref="_dialog">
+        <h5 slot="title">
+            Confirmation
+        </h5>
+        <p>Are you sure you want to do this?</p>
+        <div slot="footer">
+            <IgbButton Variant="ButtonVariant.Flat" Size="SizableComponentSize.Large" @onclick="@(e => _dialog!.ToggleAsync())">Cancel</IgbButton>
+            <IgbButton Variant="ButtonVariant.Flat" Size="SizableComponentSize.Large" @onclick="@(e => _dialog!.ToggleAsync())">OK</IgbButton>
+        </div>
+    </IgbDialog>
+    <span class="banner">Banner not yet available in Blazor</span>
+</div>
+
+@code {
+    private IgbStepper _stepper;
+    private bool _checked = true;
+    private double _value = 4;
+    private double _value1 = 0;
+    private string _value2 = "2";
+    private List<BoxOfficeRevenueType> _financialBoxOfficeRevenue = new();
+    private List<EmployeesType> _northwindEmployees = new();
+    private IgbSnackbar _snackbar;
+    private IgbDialog _dialog;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _financialBoxOfficeRevenue = await FinancialService.GetBoxOfficeRevenue();
+        _northwindEmployees = await NorthwindService.GetEmployees();
+
+        await base.OnInitializedAsync();
+    }
+}
