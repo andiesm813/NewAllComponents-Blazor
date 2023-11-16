@@ -1,0 +1,38 @@
+.row-layout {
+    display: flex;
+}
+.calendar-container {
+    justify-content: center;
+    align-items: stretch;
+    align-content: flex-start;
+    height: 100%;
+}
+.group {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: flex-start;
+    gap: 24px;
+    position: relative;
+    min-width: 50px;
+    min-height: 50px;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+.calendar {
+    width: 104px;
+    height: max-content;
+}
+.calendar_1 {
+    width: 180px;
+    height: max-content;
+}
+.calendar_2 {
+    width: 240px;
+    height: max-content;
+}
+.calendar_3 {
+    height: max-content;
+    flex-grow: 1;
+    flex-basis: 0;
+}

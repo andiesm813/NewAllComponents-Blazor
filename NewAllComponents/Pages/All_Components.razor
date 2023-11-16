@@ -6,17 +6,17 @@
 @inject IFinancialService FinancialService
 @inject INorthwindService NorthwindService
 
-<div class="column-layout view-1-container">
+<div class="column-layout all-components-container">
     <div class="row-layout group">
         <div class="column-layout group_1">
-            <IgbTabs class="tabs" view_1-scope>
+            <IgbTabs class="tabs" all_components-scope>
                 <IgbTab Selected="true">
                     <span class="material-icons">
                         library_music
                     </span>
                     <span>Albums</span>
                 </IgbTab>
-                <IgbTabPanel class="row-layout tab-item-content" view_1-scope>
+                <IgbTabPanel class="row-layout tab-item-content" all_components-scope>
                     <p class="typography__body-1 text">
                         Albums
                     </p>
@@ -27,16 +27,16 @@
                     </span>
                     <span>Favorite</span>
                 </IgbTab>
-                <IgbTabPanel class="row-layout tab-item-content" view_1-scope></IgbTabPanel>
+                <IgbTabPanel class="row-layout tab-item-content" all_components-scope></IgbTabPanel>
                 <IgbTab Disabled="true">
                     <span class="material-icons">
                         info
                     </span>
                     <span>Details</span>
                 </IgbTab>
-                <IgbTabPanel class="row-layout tab-item-content" view_1-scope></IgbTabPanel>
+                <IgbTabPanel class="row-layout tab-item-content" all_components-scope></IgbTabPanel>
             </IgbTabs>
-            <IgbAccordion SingleExpand="false" class="accordion" view_1-scope>
+            <IgbAccordion SingleExpand="false" class="accordion" all_components-scope>
                 <IgbExpansionPanel>
                     <p class="typography__body-1 text">
                         This is the content text of the expanded accordion item.
@@ -59,7 +59,7 @@
                     <span slot="subtitle">Action, Adventure, Thriller</span>
                 </IgbExpansionPanel>
             </IgbAccordion>
-            <IgbList class="list" view_1-scope>
+            <IgbList class="list" all_components-scope>
                 <IgbListItem>
                     <div slot="title">Single Line Item</div>
                     <span slot="end" class="material-icons icon">
@@ -79,7 +79,7 @@
                     </span>
                 </IgbListItem>
             </IgbList>
-            <IgbList class="list" view_1-scope>
+            <IgbList class="list" all_components-scope>
                 <IgbListItem>
                     <IgbAvatar Src="assets/53c4f9a7b7f5f730460a0235b717b99679251327.png" slot="start" Shape="AvatarShape.Circle"></IgbAvatar>
                     <div slot="title">Primary Text </div>
@@ -107,15 +107,15 @@
             </IgbList>
         </div>
         <div class="column-layout group_1">
-            <IgbStepper Orientation="StepperOrientation.Vertical" TitlePosition="StepperTitlePosition.End" @ref="_stepper" class="stepper" view_1-scope>
+            <IgbStepper Orientation="StepperOrientation.Vertical" TitlePosition="StepperTitlePosition.End" @ref="_stepper" class="stepper" all_components-scope>
                 <IgbStep Optional="true">
                     <div class="column-layout step-content">
                         <div class="row-layout group_2">
-                            <IgbButton Size="SizableComponentSize.Large" @onclick="@(e => _stepper!.NextAsync())" class="button" view_1-scope>
+                            <IgbButton Size="SizableComponentSize.Large" @onclick="@(e => _stepper!.NextAsync())" class="button" all_components-scope>
                                 Next
                                 <IgbRipple></IgbRipple>
                             </IgbButton>
-                            <IgbButton Size="SizableComponentSize.Large" @onclick="@(e => _stepper!.NextAsync())" class="button" view_1-scope>
+                            <IgbButton Size="SizableComponentSize.Large" @onclick="@(e => _stepper!.NextAsync())" class="button" all_components-scope>
                                 Next
                                 <IgbRipple></IgbRipple>
                             </IgbButton>
@@ -130,11 +130,11 @@
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur soluta nulla asperiores, officia ullam recusandae voluptatem omnis perferendis vitae non magni magnam praesentium placeat nemo quas repudiandae. Nisi, quo ex!
                         </p>
                         <div class="row-layout group_3">
-                            <IgbButton Size="SizableComponentSize.Large" @onclick="@(e => _stepper!.PrevAsync())" class="button" view_1-scope>
+                            <IgbButton Size="SizableComponentSize.Large" @onclick="@(e => _stepper!.PrevAsync())" class="button" all_components-scope>
                                 Prev
                                 <IgbRipple></IgbRipple>
                             </IgbButton>
-                            <IgbButton Size="SizableComponentSize.Large" @onclick="@(e => _stepper!.NextAsync())" class="button" view_1-scope>
+                            <IgbButton Size="SizableComponentSize.Large" @onclick="@(e => _stepper!.NextAsync())" class="button" all_components-scope>
                                 Next
                                 <IgbRipple></IgbRipple>
                             </IgbButton>
@@ -153,7 +153,7 @@
                     <p slot="subtitle">21 Aug 2021 - 07:55 AM</p>
                 </IgbStep>
             </IgbStepper>
-            <IgbTree Selection="TreeSelection.Multiple" class="tree" view_1-scope>
+            <IgbTree Selection="TreeSelection.Multiple" class="tree" all_components-scope>
                 <IgbTreeItem Label="Design">
                     <IgbTreeItem Label="Figma">
                         <IgbTreeItem Label="Figma"></IgbTreeItem>
@@ -165,21 +165,21 @@
         </div>
         <div class="column-layout group_4">
             <div class="row-layout group_5">
-                <IgbButton Size="SizableComponentSize.Large" class="button_1" view_1-scope>
+                <IgbButton Size="SizableComponentSize.Large" class="button_1" all_components-scope>
                     <span class="material-icons">
                         add
                     </span>
                     <span>Button</span>
                     <IgbRipple></IgbRipple>
                 </IgbButton>
-                <IgbButton Variant="ButtonVariant.Outlined" Size="SizableComponentSize.Large" class="button_1" view_1-scope>
+                <IgbButton Variant="ButtonVariant.Outlined" Size="SizableComponentSize.Large" class="button_1" all_components-scope>
                     <span class="material-icons">
                         add
                     </span>
                     <span>Button</span>
                     <IgbRipple></IgbRipple>
                 </IgbButton>
-                <IgbButton Variant="ButtonVariant.Flat" Size="SizableComponentSize.Large" class="button_1" view_1-scope>
+                <IgbButton Variant="ButtonVariant.Flat" Size="SizableComponentSize.Large" class="button_1" all_components-scope>
                     <span class="material-icons">
                         add
                     </span>
@@ -195,13 +195,13 @@
                     </span>
                     <IgbRipple></IgbRipple>
                 </IgbIconButton>
-                <IgbButton Variant="ButtonVariant.Fab" Size="SizableComponentSize.Large" class="user-input" view_1-scope>
+                <IgbButton Variant="ButtonVariant.Fab" Size="SizableComponentSize.Large" class="user-input" all_components-scope>
                     <span class="material-icons">
                         add
                     </span>
                     <IgbRipple></IgbRipple>
                 </IgbButton>
-                <IgbButton Variant="ButtonVariant.Fab" Size="SizableComponentSize.Large" class="user-input" view_1-scope>
+                <IgbButton Variant="ButtonVariant.Fab" Size="SizableComponentSize.Large" class="user-input" all_components-scope>
                     <span class="material-icons">
                         add
                     </span>
@@ -211,27 +211,27 @@
                 <span class="material-icons icon">
                     mail
                 </span>
-                <IgbBadge class="badge" view_1-scope></IgbBadge>
-                <IgbBadge class="badge" view_1-scope>
+                <IgbBadge class="badge" all_components-scope></IgbBadge>
+                <IgbBadge class="badge" all_components-scope>
                     1
                 </IgbBadge>
-                <IgbBadge class="badge" view_1-scope>
+                <IgbBadge class="badge" all_components-scope>
                     10
                 </IgbBadge>
-                <IgbBadge class="badge" view_1-scope>
+                <IgbBadge class="badge" all_components-scope>
                     1000
                 </IgbBadge>
-                <IgbBadge class="badge" view_1-scope>
+                <IgbBadge class="badge" all_components-scope>
                     <span class="material-icons">
                         mail
                     </span>
                 </IgbBadge>
             </div>
             <div class="row-layout group_7">
-                <IgbChip Size="SizableComponentSize.Large" class="chip" view_1-scope>
+                <IgbChip Size="SizableComponentSize.Large" class="chip" all_components-scope>
                     Country
                 </IgbChip>
-                <IgbChip Size="SizableComponentSize.Large" class="chip" view_1-scope>
+                <IgbChip Size="SizableComponentSize.Large" class="chip" all_components-scope>
                     <span slot="prefix">
                         <span class="material-icons icon_1">
                             place
@@ -239,7 +239,7 @@
                     </span>
                     Country
                 </IgbChip>
-                <IgbChip Size="SizableComponentSize.Large" class="chip" view_1-scope>
+                <IgbChip Size="SizableComponentSize.Large" class="chip" all_components-scope>
                     <span slot="prefix">
                         <span class="material-icons icon_1">
                             place
@@ -255,46 +255,46 @@
             </div>
             <div class="row-layout group_8">
                 <div class="column-layout group_9">
-                    <IgbCheckbox LabelPosition="CheckboxBaseLabelPosition.After" class="user-input" view_1-scope>
+                    <IgbCheckbox LabelPosition="CheckboxBaseLabelPosition.After" class="user-input" all_components-scope>
                         Label
                     </IgbCheckbox>
-                    <IgbCheckbox LabelPosition="CheckboxBaseLabelPosition.After" class="user-input" view_1-scope>
+                    <IgbCheckbox LabelPosition="CheckboxBaseLabelPosition.After" class="user-input" all_components-scope>
                         Label
                     </IgbCheckbox>
-                    <IgbCheckbox LabelPosition="CheckboxBaseLabelPosition.After" class="user-input" view_1-scope>
+                    <IgbCheckbox LabelPosition="CheckboxBaseLabelPosition.After" class="user-input" all_components-scope>
                         Label
                     </IgbCheckbox>
                 </div>
-                <IgbRadioGroup class="user-input" view_1-scope>
-                    <IgbRadio Value="1" class="radio" view_1-scope>
+                <IgbRadioGroup class="user-input" all_components-scope>
+                    <IgbRadio Value="1" class="radio" all_components-scope>
                         Label
                     </IgbRadio>
-                    <IgbRadio Value="2" class="radio" view_1-scope>
+                    <IgbRadio Value="2" class="radio" all_components-scope>
                         Label
                     </IgbRadio>
-                    <IgbRadio Value="3" class="radio" view_1-scope>
+                    <IgbRadio Value="3" class="radio" all_components-scope>
                         Label
                     </IgbRadio>
                 </IgbRadioGroup>
                 <div class="column-layout group_10">
-                    <IgbSwitch LabelPosition="CheckboxBaseLabelPosition.Before" Checked="@_checked" Change="@(e => _checked = (bool)e.Detail)" class="user-input" view_1-scope>
+                    <IgbSwitch LabelPosition="CheckboxBaseLabelPosition.Before" Checked="@_checked" Change="@(e => _checked = (bool)e.Detail)" class="user-input" all_components-scope>
                         Label
                     </IgbSwitch>
-                    <IgbSwitch LabelPosition="CheckboxBaseLabelPosition.Before" class="user-input" view_1-scope>
+                    <IgbSwitch LabelPosition="CheckboxBaseLabelPosition.Before" class="user-input" all_components-scope>
                         Label
                     </IgbSwitch>
-                    <IgbSwitch LabelPosition="CheckboxBaseLabelPosition.Before" Checked="@_checked" Disabled="true" Change="@(e => _checked = (bool)e.Detail)" class="user-input" view_1-scope>
+                    <IgbSwitch LabelPosition="CheckboxBaseLabelPosition.Before" Checked="@_checked" Disabled="true" Change="@(e => _checked = (bool)e.Detail)" class="user-input" all_components-scope>
                         Label
                     </IgbSwitch>
-                    <IgbSwitch LabelPosition="CheckboxBaseLabelPosition.Before" Disabled="true" class="user-input" view_1-scope>
+                    <IgbSwitch LabelPosition="CheckboxBaseLabelPosition.Before" Disabled="true" class="user-input" all_components-scope>
                         Label
                     </IgbSwitch>
                 </div>
             </div>
             <div class="row-layout group_8">
-                <IgbRating Label="Rate your experience" Size="SizableComponentSize.Small" class="user-input" view_1-scope></IgbRating>
-                <IgbRating Label="Rate your experience" Value="@_value" Size="SizableComponentSize.Medium" Change="@(e => _value = (double)e.Detail)" class="user-input" view_1-scope></IgbRating>
-                <IgbRating Label="Rate your experience" Value="@_value" Size="SizableComponentSize.Large" Disabled="true" Change="@(e => _value = (double)e.Detail)" class="user-input" view_1-scope></IgbRating>
+                <IgbRating Label="Rate your experience" Size="SizableComponentSize.Small" class="user-input" all_components-scope></IgbRating>
+                <IgbRating Label="Rate your experience" Value="@_value" Size="SizableComponentSize.Medium" Change="@(e => _value = (double)e.Detail)" class="user-input" all_components-scope></IgbRating>
+                <IgbRating Label="Rate your experience" Value="@_value" Size="SizableComponentSize.Large" Disabled="true" Change="@(e => _value = (double)e.Detail)" class="user-input" all_components-scope></IgbRating>
             </div>
             <div class="row-layout group_7">
                 <IgbAvatar Src="assets/a7f211be67afc061d9571f5b5b5236cd92420e0c.png" Size="SizableComponentSize.Large"></IgbAvatar>
@@ -320,11 +320,11 @@
                 </IgbAvatar>
             </div>
             <div class="row-layout group_7">
-                <IgbSlider Value="@_value1" Min="0" Max="100" Step="10" DiscreteTrack="true" Change="@(e => _value1 = (double)e.Detail)" class="slider" view_1-scope></IgbSlider>
+                <IgbSlider Value="@_value1" Min="0" Max="100" Step="10" DiscreteTrack="true" Change="@(e => _value1 = (double)e.Detail)" class="slider" all_components-scope></IgbSlider>
             </div>
         </div>
         <div class="column-layout group_11">
-            <IgbInput Label="Label" Placeholder="Placeholder" Outlined="true" class="user-input_2" view_1-scope>
+            <IgbInput Label="Label" Placeholder="Placeholder" Outlined="true" class="user-input_2" all_components-scope>
                 <span slot="prefix">
                     <span class="material-icons icon">
                         account_circle
@@ -337,9 +337,9 @@
                 </span>
                 <span slot="helper-text">Hint</span>
             </IgbInput>
-            <IgbDatePicker Label="Date" class="date-picker" view_1-scope></IgbDatePicker>
+            <IgbDatePicker Label="Date" class="date-picker" all_components-scope></IgbDatePicker>
             <span class="textarea">Textarea not yet available in Blazor</span>
-            <IgbSelect Outlined="true" Label="Select" Value="@_value2" Change="@(e => _value2 = (string)e.Detail.Value)" class="user-input_2" view_1-scope>
+            <IgbSelect Outlined="true" Label="Select" Value="@_value2" Change="@(e => _value2 = (string)e.Detail.Value)" class="user-input_2" all_components-scope>
                 <IgbSelectHeader>
                     Header
                 </IgbSelectHeader>
@@ -356,8 +356,8 @@
                     Drop Down Item text
                 </IgbSelectItem>
             </IgbSelect>
-            <IgbCombo Outlined="true" Data="@_financialBoxOfficeRevenue" Label="Label/Placeholder" DisplayKey="Franchise" SingleSelect="true" class="user-input_2" view_1-scope></IgbCombo>
-            <IgbInput Label="Label" Placeholder="Placeholder" Outlined="false" class="user-input_2" view_1-scope>
+            <IgbCombo Outlined="true" Data="@_financialBoxOfficeRevenue" Label="Label/Placeholder" DisplayKey="Franchise" SingleSelect="true" class="user-input_2" all_components-scope></IgbCombo>
+            <IgbInput Label="Label" Placeholder="Placeholder" Outlined="false" class="user-input_2" all_components-scope>
                 <span slot="prefix">
                     <span class="material-icons icon">
                         account_circle
@@ -370,9 +370,9 @@
                 </span>
                 <span slot="helper-text">Hint</span>
             </IgbInput>
-            <IgbDatePicker Label="Date" class="date-picker" view_1-scope></IgbDatePicker>
+            <IgbDatePicker Label="Date" class="date-picker" all_components-scope></IgbDatePicker>
             <span class="textarea">Textarea not yet available in Blazor</span>
-            <IgbSelect Outlined="false" Label="Select" Value="@_value2" Change="@(e => _value2 = (string)e.Detail.Value)" class="user-input_2" view_1-scope>
+            <IgbSelect Outlined="false" Label="Select" Value="@_value2" Change="@(e => _value2 = (string)e.Detail.Value)" class="user-input_2" all_components-scope>
                 <IgbSelectHeader>
                     Header
                 </IgbSelectHeader>
@@ -389,12 +389,12 @@
                     Drop Down Item text
                 </IgbSelectItem>
             </IgbSelect>
-            <IgbCombo Data="@_financialBoxOfficeRevenue" Label="Label/Placeholder" DisplayKey="Franchise" Outlined="false" SingleSelect="true" class="user-input_2" view_1-scope></IgbCombo>
+            <IgbCombo Data="@_financialBoxOfficeRevenue" Label="Label/Placeholder" DisplayKey="Franchise" Outlined="false" SingleSelect="true" class="user-input_2" all_components-scope></IgbCombo>
         </div>
         <div class="column-layout group_1">
-            <IgbCalendar HideHeader="false" class="calendar" view_1-scope></IgbCalendar>
-            <IgbCard Outlined="true" class="card" view_1-scope>
-                <IgbCardMedia class="media-content" view_1-scope>
+            <IgbCalendar HideHeader="false" class="calendar" all_components-scope></IgbCalendar>
+            <IgbCard Outlined="true" class="card" all_components-scope>
+                <IgbCardMedia class="media-content" all_components-scope>
                     <img src="assets/9224c81ebdbe1cd0ac916c1389ee7eb2e9bf77b6.png" class="image" />
                 </IgbCardMedia>
                 <IgbCardHeader>
@@ -408,13 +408,13 @@
                         Subtitle goes here...
                     </h5>
                 </IgbCardHeader>
-                <IgbCardContent class="body-content" view_1-scope>
+                <IgbCardContent class="body-content" all_components-scope>
                     <p class="typography__body-2 text">
                         A paragraph is a self-contained unit of a discourse in writing dealing with a particular point or idea.
                     </p>
                 </IgbCardContent>
-                <IgbCardActions class="actions-content" view_1-scope>
-                    <IgbButton Variant="ButtonVariant.Flat" slot="start" Size="SizableComponentSize.Large" class="button_2" view_1-scope>
+                <IgbCardActions class="actions-content" all_components-scope>
+                    <IgbButton Variant="ButtonVariant.Flat" slot="start" Size="SizableComponentSize.Large" class="button_2" all_components-scope>
                         Button
                         <IgbRipple></IgbRipple>
                     </IgbButton>
@@ -441,9 +441,9 @@
         </div>
     </div>
     <div class="row-layout group_12">
-        <IgbCategoryChart DataSource="@_financialBoxOfficeRevenue" ChartType="CategoryChartType.Area" ChartTitle="This is the title" XAxisTitle="Axis title" YAxisTitle="Vertical Axis Title" ComputedPlotAreaMarginMode="ComputedPlotAreaMarginMode.Series" class="category-chart" view_1-scope></IgbCategoryChart>
-        <IgbCategoryChart DataSource="@_financialBoxOfficeRevenue" ChartType="CategoryChartType.Column" ChartTitle="This is the title" ComputedPlotAreaMarginMode="ComputedPlotAreaMarginMode.Series" class="category-chart" view_1-scope></IgbCategoryChart>
-        <IgbGrid Data="@_northwindEmployees" PrimaryKey="EmployeeID" DisplayDensity="DisplayDensity.Cosy" AllowFiltering="true" FilterMode="FilterMode.ExcelStyleFilter" AutoGenerate="false" class="ig-typography grid" view_1-scope>
+        <IgbCategoryChart DataSource="@_financialBoxOfficeRevenue" ChartType="CategoryChartType.Area" ChartTitle="This is the title" XAxisTitle="Axis title" YAxisTitle="Vertical Axis Title" ComputedPlotAreaMarginMode="ComputedPlotAreaMarginMode.Series" class="category-chart" all_components-scope></IgbCategoryChart>
+        <IgbCategoryChart DataSource="@_financialBoxOfficeRevenue" ChartType="CategoryChartType.Column" ChartTitle="This is the title" ComputedPlotAreaMarginMode="ComputedPlotAreaMarginMode.Series" class="category-chart" all_components-scope></IgbCategoryChart>
+        <IgbGrid Data="@_northwindEmployees" PrimaryKey="EmployeeID" DisplayDensity="DisplayDensity.Cosy" AllowFiltering="true" FilterMode="FilterMode.ExcelStyleFilter" AutoGenerate="false" class="ig-typography grid" all_components-scope>
             <IgbColumn Field="LastName" DataType="GridColumnDataType.String" Header="lastName" Sortable="true" Selectable="false"></IgbColumn>
             <IgbColumn Field="FirstName" DataType="GridColumnDataType.String" Header="firstName" Sortable="true" Selectable="false"></IgbColumn>
             <IgbColumn Field="EmployeeID" DataType="GridColumnDataType.Number" Header="employeeID" Sortable="true" Selectable="false"></IgbColumn>
@@ -465,7 +465,7 @@
     <p class="typography__body-1 text">
         This is the content text of the active step.
     </p>
-    <IgbSnackbar ActionText="Action" Action="@(e => _snackbar!.ToggleAsync())" @ref="_snackbar" class="snackbar" view_1-scope>
+    <IgbSnackbar ActionText="Action" Action="@(e => _snackbar!.ToggleAsync())" @ref="_snackbar" class="snackbar" all_components-scope>
         This is a message
     </IgbSnackbar>
     <IgbDialog CloseOnOutsideClick="true" KeepOpenOnEscape="false" @ref="_dialog">

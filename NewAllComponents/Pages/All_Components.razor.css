@@ -2,10 +2,11 @@
     display: flex;
     flex-direction: column;
 }
-.view-1-container {
+.all-components-container {
     justify-content: flex-start;
     align-items: stretch;
     align-content: flex-start;
+    overflow: auto;
     height: 100%;
 }
 .row-layout {

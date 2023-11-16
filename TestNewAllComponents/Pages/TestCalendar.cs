@@ -5,14 +5,16 @@ using NewAllComponents.Pages;
 namespace TestNewAllComponents
 {
 	[Collection("NewAllComponents")]
-	public class TestView_3
+	public class TestCalendar
 	{
 		[Fact]
 		public void ViewIsCreated()
 		{
 			using var ctx = new TestContext();
 			ctx.JSInterop.Mode = JSRuntimeMode.Loose;
-			var componentUnderTest = ctx.RenderComponent<View_3>();
+			ctx.Services.AddIgniteUIBlazor(
+				typeof(IgbCalendarModule));
+			var componentUnderTest = ctx.RenderComponent<Calendar>();
 			Assert.NotNull(componentUnderTest);
 		}
 	}
