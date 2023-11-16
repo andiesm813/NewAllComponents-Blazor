@@ -7,7 +7,7 @@ using NewAllComponents.Northwind;
 namespace TestNewAllComponents
 {
 	[Collection("NewAllComponents")]
-	public class TestView_1
+	public class TestAll_Components
 	{
 		[Fact]
 		public void ViewIsCreated()
@@ -44,7 +44,7 @@ namespace TestNewAllComponents
 				typeof(IgbSnackbarModule));
 			ctx.Services.AddScoped<IFinancialService>(sp => new MockFinancialService());
 			ctx.Services.AddScoped<INorthwindService>(sp => new MockNorthwindService());
-			var componentUnderTest = ctx.RenderComponent<View_1>();
+			var componentUnderTest = ctx.RenderComponent<All_Components>();
 			Assert.NotNull(componentUnderTest);
 		}
 	}

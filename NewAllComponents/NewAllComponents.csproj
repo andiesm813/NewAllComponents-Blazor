@@ -13,8 +13,8 @@
 
   <ItemGroup>
     <None Update="Shared/MainLayout.razor.css" CssScope="master_view-scope" />
-    <None Update="Pages/View_1.razor.css" CssScope="view_1-scope" />
-    <None Update="Pages/View_3.razor.css" CssScope="view_3-scope" />
+    <None Update="Pages/All_Components.razor.css" CssScope="all_components-scope" />
+    <None Update="Pages/Calendar.razor.css" CssScope="calendar-scope" />
   </ItemGroup>
 
 </Project>

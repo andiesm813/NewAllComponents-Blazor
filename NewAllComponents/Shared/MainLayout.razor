@@ -34,7 +34,7 @@
         </IgbIconButton>
     </IgbNavbar>
     <div class="row-layout group_1">
-        <IgbNavDrawer Open="true" Position="NavDrawerPosition.Relative" @ref="_navDrawer" class="nav-drawer" master_view-scope>
+        <IgbNavDrawer Position="NavDrawerPosition.Relative" @ref="_navDrawer" class="nav-drawer" master_view-scope>
             <IgbNavDrawerItem @onclick="@(e => Navigate(""))">
                 <span slot="icon">
                     <span class="material-icons icon">
@@ -53,7 +53,7 @@
                 </span>
                 <div slot="content">View 2</div>
             </IgbNavDrawerItem>
-            <IgbNavDrawerItem @onclick="@(e => Navigate("view_3"))">
+            <IgbNavDrawerItem>
                 <span slot="icon">
                     <span class="material-icons icon">
                         assignment_turned_in
